@@ -1,7 +1,7 @@
 <html>
 
 <head>
-    <title>Latihan 1</title>
+    <title>Latihan1</title>
 </head>
 
 <body>
@@ -9,7 +9,7 @@
     Nilai 1 = <?= $nilai; ?>
     Nilai 2 = <?= $nilai; ?>
     ini hasil dari pemodelan dengan methode penjumlah yaitu <?=
-                                                            $nilai . " + " . $nilai . " = " . $hasil; ?>
+                                                            $nilai1 . " + " . $nilai2 . " = " . $hasil; ?>
 
 </body>
 
