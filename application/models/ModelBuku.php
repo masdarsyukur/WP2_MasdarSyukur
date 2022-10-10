@@ -11,7 +11,7 @@ class ModelBuku extends CI_Model
     {
         return $this->db->get_where('buku', $where);
     }
-    public function simpatiBuku($data = null)
+    public function simpanBuku($data = null)
     {
         $this->db->insert('buku', $data);
     }
