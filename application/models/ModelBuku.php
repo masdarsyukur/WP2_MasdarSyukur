@@ -1,5 +1,5 @@
 <?php
-define('BASEPATH') or exit('No direct script access allowed');
+defined('BASEPATH') or exit('No direct script access allowed');
 class ModelBuku extends CI_Model
 {
     //manajemen buku
@@ -26,7 +26,7 @@ class ModelBuku extends CI_Model
     public function total($field, $where)
     {
         $this->db->select_sum($field);
-        if(!empty($where) && count($where) > 0){
+        if (!empty($where) && count($where) > 0) {
             $this->db->where($where);
         }
         $this->db->from('buku');
@@ -43,7 +43,7 @@ class ModelBuku extends CI_Model
     }
     public function simpanKategori($data = null)
     {
-        $this->db->insert('kategori', $data)
+        $this->db->insert('kategori', $data);
     }
     public function hapusKategori($where = null)
     {
@@ -58,7 +58,7 @@ class ModelBuku extends CI_Model
     {
         $this->db->select('buku.id_kategori,kategori.kategori');
         $this->db->from('buku');
-        $this->db->join('kategori','kategori.idbuku.id_kategori');
+        $this->db->join('kategori', 'kategori.idbuku.id_kategori');
         $this->db->where($where);
         return $this->db->get();
     }
